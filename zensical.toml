@@ -17,7 +17,7 @@ site_name = "FRCElectrical.org"
 # meaningful description of the site content for use by search engines.
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_description
-site_description = "A new project generated from the default template project."
+site_description = "Master the FRC Control System. From your first crimp to advanced CAN bus diagnostics, FRCElectrical.org provides clear, step-by-step documentation to help teams build robust, competition-ready robot wiring. Stop troubleshooting on the field and start building for reliability."
 
 # The site_author attribute. This is used in the HTML head element.
 #
