@@ -5,21 +5,36 @@ icon: lucide/zap
 
 # The FRC Control System
 
-## Control system basics: 
+## Control system basics
 
-- Battery, SB50 and/or 120: Originates all of the power to the robot.
-- Main breaker
-- Power distribution: Power originates with distribution hub or panel (PDH/PDP/Andymark): do not use the switchable port on PDH for essential components as it has been known to flicker on and off
-- Fuses
-- Mini Power distribution
-- Sensors
-- Systemcore
-- Radio
-- RSL
-- Motor/Motor controller
-- Encoders: Swerve encoders can be spliced from a single wire into 5 port wago. Soldering is a way that teams have done this. You’ll learn later why soldering is considered bad for an FRC environment, but for now, just understand it is a worse solution than others. A 5 port wago is the most common correct way to accomplish a 4 way splice for encoder wires.  
-- Camera
-- Terminating resistor
+### Battery
+- SB50 and/or 120: Originates all of the power to the robot.
+### Main breaker
+- todo
+!!! warning
+
+    DO NOT use the Optifuse breaker.
+### Power distribution 
+- Power originates with distribution hub or panel (PDH/PDP/Andymark)
+### Fuses
+- todo
+### Mini Power distribution
+- todo
+### Sensors
+- todo
+- Encoders
+### SystemCore
+- todo
+### Radio
+- todo
+### RSL
+- todo
+### Motors/Motor controllers
+- todo
+### Cameras
+- todo: also consider co-processor section?
+### Terminating resistors
+- todo
 
 
 ## CAN 
@@ -38,47 +53,81 @@ CAN can be wired in two different ways:
 
     Always place resistor at end of each loop (120 OHM resistor, include why not to use the PDH resistor if using a PDH)
 
-# Electrical Components
+## Electrical Components
 
-## Motors
+### Motors
 
 Intro to motors: Motors are the joints of the robot; they control every moving and rotating component on most modern robots. Thus, wiring them is very important. There are two types of motors, brushed and brushless. In FRC, all that really needs to be known is that brushed motors aren’t used any more. However, outlines of both types will be provided below before the motors most commonly used in FRC are.
 - Brushed 
 - Brushless
 
-1. Krakens (best pick for quality, talon FX gives integrated motor controller
-2. Neo
-3. CIMs
+#### WCP Krakens 
+- (best pick for quality, talon FX gives integrated motor controller)
+
+##### X60
+- X60 is the 60mm diameter Kraken
+##### X44 
+- X44 is the 44mm diameter Kraken
+
+#### REV NEO
+##### NEO 1.2
+- todo
+##### NEO 2.0
+- todo
+##### NEO Vortex
+- todo
+
+#### CIMs
+- CIMs are brushed motors
+##### 2.5in CIM
+- todo
+##### Slim CIM
+- todo
+
+#### Small Brushless Motors
+- 550 / 775 Class Motors
+##### CTRE Minion
+- todo
+##### Thrifty Nova
+- todo
+
 
 ### Motor controllers
 
 #### Talon FX
-
 - Motor controller that is integrated into motors such as Kraken (x60/x44). Talon FX acts as an integrated motor controller meaning that an external controller that is separately wired is not needed. For Kraken X60/X44s, wiring is relatively simple because the controller is integrated in the motor itself. CAN and Power directly stem from the motor and can be connected to their appropriate locations. Power being the Distribution Panel/Hub and CAN into the chain.
-- SparkMAX
-- Spark Flex
-- Thrifty Nova
-- Talon FXS
 
-## Gyros:
+#### REV SparkMAX
+- todo
+#### REV Spark Flex
+- todo
+#### Thrifty Nova
+- todo
+#### CTRE Talon FXS
+- todo
 
-- Pigeon
-- CANandGyro
+
 
 ### Power distribution
 
-- PDH
-- PDP
+#### REV Power Distribution Hub (PDH)
+- todo
+#### CTRE Power Distribution Board 2.0 (PDP)
+- todo
+#### AndyMark Power Distribution (AMPD)
+- todo
 
-## Systemcore
+### Systemcore
 
 1. https://docs.wpilib.org/en/latest/docs/software/systemcore-info/systemcore-introduction.html 
 2. https://community.firstinspires.org/systemcore-alpha-testing-first-wave 
 
 ### Mini power distribution
 
-- Rev MPM
-- VRM
+#### REV Mini Power Module (MPM)
+- todo
+#### VRM
+- todo
 
 ## Cameras
 
@@ -87,9 +136,30 @@ Intro to motors: Motors are the joints of the robot; they control every moving a
 
 ## Sensors
 
-- CANRange
-- Limit Switch
-- Encoders
-- Mag Switch
-- CANAndColor
-- Beam Breaks
+### IMUs / Gyros
+#### CTRE Pigeon 2.0
+- todo
+#### Redux CANandGyro
+- Todo
+
+### Encoders
+#### CTRE CANCoder
+- todo
+#### Redux CANAndMag
+- todo
+#### Thrifty Absolute Magnetic Encoder
+- todo
+
+### Distance Sensors
+#### CTRE CANrange
+- todo
+#### Redux CanAndColor
+- Both a distance and color sensor
+
+### Other Sensors
+#### Limit Switch
+- todo
+#### Mag Switch
+- todo
+#### Beam Breaks
+- todo
