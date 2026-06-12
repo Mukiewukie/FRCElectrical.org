@@ -11,7 +11,7 @@ icon: lucide/zap
 - Power distribution: Power originates with distribution hub or panel (PDH/PDP/Andymark): do not use the switchable port on PDH for essential components as it has been known to flicker on and off
 - Fuses
 - Mini Power distribution
-- Gyro
+- Sensors
 - Systemcore
 - Radio
 - RSL
