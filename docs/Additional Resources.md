@@ -30,7 +30,5 @@ This page collects helpful links, guides, and external resources related to the 
 
 - Brushed vs Brushless overview: [https://www.youtube.com/watch?v=wAtN3SEYSco](https://www.youtube.com/watch?v=wAtN3SEYSco)
 
-## Commonly Ordered Parts
 
-![Commonly Ordered Parts](assets/commonlyorderedparts.jpg "Commonly Ordered Parts")
 
