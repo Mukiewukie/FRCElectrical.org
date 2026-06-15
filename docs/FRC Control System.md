@@ -98,7 +98,13 @@ Intro to motors: Motors are the joints of the robot; they control every moving a
 - Motor controller that is integrated into motors such as Kraken (x60/x44). Talon FX acts as an integrated motor controller meaning that an external controller that is separately wired is not needed. For Kraken X60/X44s, wiring is relatively simple because the controller is integrated in the motor itself. CAN and Power directly stem from the motor and can be connected to their appropriate locations. Power being the Distribution Panel/Hub and CAN into the chain.
 
 #### REV SparkMAX
-- todo
+![Spark MAX](/assets/SPARK_MAX.png)
+
+- Use Andersons to connect the SparkMAX to the motor
+- Use Ferrules to connect the SparkMAX to the Power Distribution Solution
+
+!!! warning
+    Example Warning
 #### REV Spark Flex
 - todo
 #### Thrifty Nova
