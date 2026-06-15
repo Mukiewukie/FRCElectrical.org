@@ -63,7 +63,7 @@ The comprehensive learning guide and technical reference for FRC Elecrical.
 -   :lucide-play:{ style="color: #ffffff;" } **Getting Started**
     <br>
     Everything you need to know to get started with electrical.
-    [→](getting-started.md){ .stretched-link }
+    [→](intro.md){ .stretched-link }
 
 -   :lucide-book-open:{ style="color: #ffffff;" } **Intro to the FRC Control System**
     <br>
@@ -78,7 +78,7 @@ The comprehensive learning guide and technical reference for FRC Elecrical.
 -   :lucide-wrench:{ style="color: #ffffff;" } **Contribution**
     <br>
     Help contribute! Since FRCElectrical.org is in an early stage, we need you.
-    [→](contribution.md){ .stretched-link }
+    [→](Contribution.md){ .stretched-link }
 
 </div>
 
