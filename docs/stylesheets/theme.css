@@ -1,7 +1,12 @@
-/* Theme: Blue accent (#4272f5) with light/dark support */
+/* Strong blue theme inspired by frcdesign.org, using accent #4272f5 */
 :root {
   --accent: #4272f5;
-  --accent-foreground-light: #ffffff; /* for use on accent backgrounds */
+  --accent-strong: #2f5ce0;
+  --accent-50: rgba(66,114,245,0.06);
+  --nav-bg: rgba(66,114,245,0.12);
+  --card-bg: rgba(66,114,245,0.03);
+  --code-bg: rgba(66,114,245,0.04);
+  --accent-foreground-light: #ffffff;
   --page-bg: #ffffff;
   --page-text: #041014;
   --muted: rgba(4,16,20,0.6);
@@ -9,13 +14,22 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --page-bg: #071011;
-    --page-text: #e6ffff;
-    --accent-foreground-light: #ffffff; /* keep white on dark mode for contrast */
+    --page-bg: #061126;
+    --page-text: #eaf2ff;
+    --nav-bg: rgba(66,114,245,0.12);
+    --card-bg: rgba(66,114,245,0.06);
+    --code-bg: rgba(66,114,245,0.06);
+    --accent-foreground-light: #ffffff;
   }
 }
 
-/* Links and interactive elements */
+/* Global page background and text */
+body, .content, .md-content {
+  background: linear-gradient(180deg, var(--page-bg) 0%, rgba(255,255,255,0) 100%);
+  color: var(--page-text) !important;
+}
+
+/* Links and primary accents */
 a, a:visited {
   color: var(--accent);
 }
@@ -23,47 +37,84 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 
-/* Header / nav subtle tint */
-.header, .site-header, .nav, .sidebar, .md-nav {
-  background-color: rgba(66,114,245,0.06);
+/* Header / nav */
+.header, .site-header {
+  background: linear-gradient(90deg, rgba(66,114,245,0.10), rgba(66,114,245,0.02));
+  border-bottom: 1px solid rgba(66,114,245,0.08);
+}
+.nav, .sidebar, .md-nav {
+  background-color: var(--nav-bg);
+}
+
+/* Active / selected nav item */
+.md-nav__link--active, .nav .current, .nav .active {
+  background-color: var(--accent) !important;
+  color: var(--accent-foreground-light) !important;
 }
 
 /* Buttons and primary controls */
 button, .btn, .button, .md-button {
-  background-color: var(--accent) !important;
+  background: linear-gradient(180deg, var(--accent), var(--accent-strong)) !important;
   color: var(--accent-foreground-light) !important;
   border: none !important;
+  box-shadow: 0 6px 18px rgba(66,114,245,0.18);
+  border-radius: 6px;
+  padding: 0.45rem 0.9rem;
 }
 
 button:hover, .btn:hover, .button:hover {
-  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+/* Cards and panels */
+.card, .panel, .md-card {
+  background-color: var(--card-bg);
+  border: 1px solid rgba(66,114,245,0.06);
+  box-shadow: 0 6px 16px rgba(12,34,78,0.04);
 }
 
 /* Code blocks, borders and accents */
 pre, code, .highlight, .card {
+  background-color: var(--code-bg);
   border-color: rgba(66,114,245,0.12);
 }
 
-/* Ensure readable text colors */
-body, .content, .md-content {
-  background-color: var(--page-bg) !important;
-  color: var(--page-text) !important;
+/* Table headers */
+table thead th {
+  background: rgba(66,114,245,0.06);
 }
 
-/* Small muted text */
+/* Muted text */
 small, .muted, .meta {
   color: var(--muted) !important;
 }
 
-/* Improve contrast for headings when accent is used as background */
-.header .site-name, .brand, .logo {
-  color: var(--page-text) !important;
+/* Brand/logo */
+.brand, .logo, .site-name {
+  color: var(--accent) !important;
 }
 
-/* Utility: accent background */
+/* Footer */
+.site-footer, .footer {
+  background: linear-gradient(180deg, rgba(66,114,245,0.02), rgba(66,114,245,0.06));
+  border-top: 1px solid rgba(66,114,245,0.06);
+}
+
+/* Accent badge utility */
 .accent-bg {
   background-color: var(--accent);
   color: var(--accent-foreground-light);
   padding: 0.25em 0.5em;
-  border-radius: 4px;
+  border-radius: 6px;
+}
+
+/* Focus outlines for accessibility */
+:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(66,114,245,0.14);
+}
+
+/* Tweak TOC/anchor indicators */
+.toc .current, .md-nav .current::before {
+  background-color: var(--accent);
 }
