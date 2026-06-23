@@ -7,17 +7,76 @@
   color: #ffffff !important;
 }
 
-/* Hero section styling */
-.hero-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  padding: 2rem 0rem;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.0));
-  border-radius: 12px;
-  margin-bottom: 1.75rem;
-  width: 100%;
+  /* Typographic scale and stronger blue highlights */
+  html { font-size: 16px; }
+  body { font-size: 1.125rem; line-height: 1.5; }
+  h1 { font-size: 2.5rem; letter-spacing: -0.02em; }
+  h2 { font-size: 1.75rem; }
+  p { font-size: 1.125rem; }
+
+  /* Hero section styling */
+  .hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 3.5rem 2rem;
+    background: linear-gradient(180deg, rgba(66,114,245,0.04), rgba(66,114,245,0.01));
+    border-radius: 12px;
+    margin-bottom: 1.75rem;
+  }
+
+  .hero-content {
+    max-width: 720px;
+  }
+
+  .hero-title { font-size: 3.6rem; margin: 0 0 0.6rem 0; line-height: 1.02; }
+  .hero-sub { font-size: 1.45rem; margin-bottom: 1.1rem; color: rgba(4,16,20,0.8); max-width: 720px; }
+
+  .hero-icon {
+    display: inline-block;
+    font-size: 280px;
+    line-height: 1;
+    color: var(--accent);
+    filter: drop-shadow(0 12px 30px rgba(66,114,245,0.28));
+  }
+
+  .hero-graphic { display: flex; align-items: center; justify-content: center; }
+
+  /* CTA styling specifically for hero */
+  .hero-cta {
+    font-size: 1.2rem;
+    padding: 0.9rem 1.3rem;
+    border-radius: 10px;
+  }
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 900px) {
+  .hero-container { padding: 2rem 1rem; flex-direction: column; gap: 1.25rem; }
+  .hero-icon { font-size: 180px; }
+  .hero-title { font-size: 2.25rem; text-align: center; }
+  .hero-sub { font-size: 1.05rem; text-align: center; }
+  .hero-cta, .github-cta { display: inline-block; width: auto; }
+}
+
+  /* Make blue highlights more apparent in cards and links */
+  .grid.cards li {
+    background: linear-gradient(180deg, rgba(66,114,245,0.02), rgba(66,114,245,0.00));
+    border: 1px solid rgba(66,114,245,0.06);
+  }
+
+  .grid.cards li a.stretched-link { color: var(--accent); }
+
+  /* Improve visibility of headings and accents */
+  h1, h2, h3 { color: var(--page-text); }
+
+  .md-nav__link--active, .md-nav__link--active:hover { background-color: var(--accent) !important; color: var(--accent-foreground-light) !important; }
+
+
+/* Global page background and text */
+body, .content, .md-content {
+  background: linear-gradient(180deg, var(--page-bg) 0%, rgba(255,255,255,0) 100%);
+  color: var(--page-text) !important;
 }
 
 .hero-content {
@@ -27,36 +86,18 @@
 }
 
 .hero-title {
-  font-size: 3rem;
-  margin: 0 0 0.5rem 0;
+  margin: 0;
   padding: 0;
 }
 
 .hero-sub {
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
   color: rgba(4, 16, 20, 0.75);
-}
-
-.hero-icon {
-  display: inline-block;
-  font-size: 240px;
-  line-height: 1;
-  color: var(--accent);
-  filter: drop-shadow(0 12px 30px rgba(66, 114, 245, 0.28));
-
 }
 
 .hero-graphic {
   display: flex;
   align-items: start;
   justify-content: center;
-}
-
-.hero-cta {
-  font-size: 1.05rem;
-  padding: 0.75rem 1.15rem;
-  border-radius: 8px;
 }
 
 .grid.cards li {
@@ -103,3 +144,106 @@ h3 {
     display: none;
   }
 }
+
+/* Secondary/outline GitHub button used in hero */
+.md-button.github-cta, .github-cta {
+  background: transparent !important;
+  color: var(--accent) !important;
+  border: 1px solid rgba(66,114,245,0.12) !important;
+  box-shadow: none !important;
+  border-radius: 8px;
+  padding: 0.45rem 0.9rem;
+  margin-left: 0.6rem;
+}
+
+.md-button.github-cta:hover, .github-cta:hover {
+  background: rgba(66,114,245,0.06) !important;
+  transform: translateY(-1px);
+}
+
+/* Cards and panels */
+.card, .panel, .md-card {
+  background-color: var(--card-bg);
+  border: 1px solid rgba(66,114,245,0.06);
+  box-shadow: 0 6px 16px rgba(12,34,78,0.04);
+}
+
+/* Table headers */
+table thead th {
+  background: rgba(66,114,245,0.06);
+}
+
+/* Muted text */
+small, .muted, .meta {
+  color: var(--muted) !important;
+}
+
+/* Brand/logo */
+.brand, .logo, .site-name {
+  color: var(--accent) !important;
+}
+
+/* Lightning/logo shine effect similar to frcdesign.org book sparkle */
+.logo {
+  position: relative;
+  display: inline-block;
+  overflow: visible;
+}
+
+.logo svg {
+  display: block;
+  transition: filter 220ms ease, transform 220ms ease;
+}
+
+.logo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.92) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-20deg);
+  mix-blend-mode: screen;
+  filter: blur(8px);
+  pointer-events: none;
+  animation: logo-shine 2.8s linear infinite;
+}
+
+.logo:hover svg {
+  filter: drop-shadow(0 10px 30px rgba(66,114,245,0.28)) brightness(1.12);
+  transform: translateY(-2px);
+}
+
+@keyframes logo-shine {
+  0% { left: -120%; opacity: 0; }
+  10% { opacity: 1; }
+  60% { left: 120%; opacity: 1; }
+  100% { left: 120%; opacity: 0; }
+}
+
+/* Footer */
+.site-footer, .footer {
+  background: linear-gradient(180deg, rgba(66,114,245,0.02), rgba(66,114,245,0.06));
+  border-top: 1px solid rgba(66,114,245,0.06);
+}
+
+/* Accent badge utility */
+.accent-bg {
+  background-color: var(--accent);
+  color: var(--accent-foreground-light);
+  padding: 0.25em 0.5em;
+  border-radius: 6px;
+}
+
+/* Focus outlines for accessibility */
+:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(66,114,245,0.14);
+}
+
+/* Tweak TOC/anchor indicators */
+.toc .current, .md-nav .current::before {
+  background-color: var(--accent);
+}
+>>>>>>> 12c9ec1 (Add logo shine, GitHub CTA, larger hero typography, update Mukesh avatar)

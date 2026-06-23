@@ -15,6 +15,8 @@ The comprehensive learning guide and technical reference for FRC Electrical.
 
 [Start Learning](intro.md){ .md-button .md-button--primary hero-cta }
 
+<a class="md-button hero-cta github-cta" href="https://github.com/FRCElectrical/FRCElectrical.org" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+
 </div>
 
 <div class="hero-graphic" markdown>
