@@ -1,6 +1,6 @@
 ---
 icon: lucide/zap
-title: Welcome to FRCElectrical.org (beta)
+title: Home
 hide:
   - navigation
   - toc
