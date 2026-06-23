@@ -161,6 +161,23 @@ h3 {
   transform: translateY(-1px);
 }
 
+/* Discord CTA */
+.discord-cta {
+  background: #5865F2 !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 0.45rem 0.6rem !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  margin-left: 0.4rem;
+}
+
+.discord-cta img { display: block; height: 20px; }
+
+.discord-cta:hover { filter: brightness(1.05); transform: translateY(-1px); }
+
 /* Cards and panels */
 .card, .panel, .md-card {
   background-color: var(--card-bg);

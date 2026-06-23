@@ -17,6 +17,10 @@ The comprehensive learning guide and technical reference for FRC Electrical.
 
 <a class="md-button hero-cta github-cta" href="https://github.com/FRCElectrical/FRCElectrical.org" target="_blank" rel="noopener noreferrer">View on GitHub</a>
 
+<a class="md-button hero-cta discord-cta" href="https://discord.gg/N6GmHcD8a" target="_blank" rel="noopener noreferrer" aria-label="Join our Discord">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Discord_logo_2021.svg" alt="Discord" style="height:20px; width:auto; vertical-align:middle;"> 
+</a>
+
 </div>
 
 <div class="hero-graphic" markdown>
