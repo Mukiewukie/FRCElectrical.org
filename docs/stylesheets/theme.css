@@ -1,177 +1,105 @@
-/* Strong blue theme inspired by frcdesign.org, using accent #4272f5 */
-:root {
-  --accent: #4272f5;
-  --accent-strong: #2f5ce0;
-  --accent-50: rgba(66,114,245,0.06);
-  --nav-bg: rgba(66,114,245,0.12);
-  --card-bg: rgba(66,114,245,0.03);
-  --code-bg: rgba(66,114,245,0.04);
-  --accent-foreground-light: #ffffff;
-  --page-bg: #ffffff;
-  --page-text: #041014;
-  --muted: rgba(4,16,20,0.6);
+.md-header {
+  background-color: #4272f5 !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --page-bg: #061126;
-    --page-text: #eaf2ff;
-    --nav-bg: rgba(66,114,245,0.12);
-    --card-bg: rgba(66,114,245,0.06);
-    --code-bg: rgba(66,114,245,0.06);
-    --accent-foreground-light: #ffffff;
-  }
+.md-header__title,
+.md-header__button {
+  color: #ffffff !important;
 }
 
-  /* Typographic scale and stronger blue highlights */
-  html { font-size: 16px; }
-  body { font-size: 1.125rem; line-height: 1.5; }
-  h1 { font-size: 2.5rem; letter-spacing: -0.02em; }
-  h2 { font-size: 1.75rem; }
-  p { font-size: 1.125rem; }
-
-  /* Hero section styling */
-  .hero-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    padding: 3.5rem 2rem;
-    background: linear-gradient(180deg, rgba(66,114,245,0.04), rgba(66,114,245,0.01));
-    border-radius: 12px;
-    margin-bottom: 1.75rem;
-  }
-
-  .hero-content {
-    max-width: 720px;
-  }
-
-  .hero-title { font-size: 3rem; margin: 0 0 0.5rem 0; }
-  .hero-sub { font-size: 1.25rem; margin-bottom: 1rem; color: rgba(4,16,20,0.75); }
-
-  .hero-icon {
-    display: inline-block;
-    font-size: 240px;
-    line-height: 1;
-    color: var(--accent);
-    filter: drop-shadow(0 12px 30px rgba(66,114,245,0.28));
-  }
-
-  .hero-graphic { display: flex; align-items: center; justify-content: center; }
-
-  /* CTA styling specifically for hero */
-  .hero-cta {
-    font-size: 1.05rem;
-    padding: 0.75rem 1.15rem;
-    border-radius: 8px;
-  }
-
-  /* Make blue highlights more apparent in cards and links */
-  .grid.cards li {
-    background: linear-gradient(180deg, rgba(66,114,245,0.02), rgba(66,114,245,0.00));
-    border: 1px solid rgba(66,114,245,0.06);
-  }
-
-  .grid.cards li a.stretched-link { color: var(--accent); }
-
-  /* Improve visibility of headings and accents */
-  h1, h2, h3 { color: var(--page-text); }
-
-  .md-nav__link--active, .md-nav__link--active:hover { background-color: var(--accent) !important; color: var(--accent-foreground-light) !important; }
-
-
-/* Global page background and text */
-body, .content, .md-content {
-  background: linear-gradient(180deg, var(--page-bg) 0%, rgba(255,255,255,0) 100%);
-  color: var(--page-text) !important;
+/* Hero section styling */
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 0rem;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.0));
+  border-radius: 12px;
+  margin-bottom: 1.75rem;
+  width: 100%;
 }
 
-/* Links and primary accents */
-a, a:visited {
+.hero-content {
+  max-width: 720px;
+  padding-left: 0.8rem !important;
+  box-sizing: border-box;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin: 0 0 0.5rem 0;
+  padding: 0;
+}
+
+.hero-sub {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: rgba(4, 16, 20, 0.75);
+}
+
+.hero-icon {
+  display: inline-block;
+  font-size: 240px;
+  line-height: 1;
+  color: var(--accent);
+  filter: drop-shadow(0 12px 30px rgba(66, 114, 245, 0.28));
+
+}
+
+.hero-graphic {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
+.hero-cta {
+  font-size: 1.05rem;
+  padding: 0.75rem 1.15rem;
+  border-radius: 8px;
+}
+
+.grid.cards li {
+  background: linear-gradient(180deg, rgba(66, 114, 245, 0.02), rgba(66, 114, 245, 0.00));
+  border: 1px solid rgba(66, 114, 245, 0.06);
+}
+
+.grid.cards li a.stretched-link {
   color: var(--accent);
 }
-a:hover, a:focus {
-  text-decoration: underline;
+
+h1,
+h2,
+h3 {
+  color: var(--page-text);
 }
 
-/* Header / nav */
-.header, .site-header {
-  background: linear-gradient(90deg, rgba(66,114,245,0.10), rgba(66,114,245,0.02));
-  border-bottom: 1px solid rgba(66,114,245,0.08);
-}
-.nav, .sidebar, .md-nav {
-  background-color: var(--nav-bg);
-}
-
-/* Active / selected nav item */
-.md-nav__link--active, .nav .current, .nav .active {
+.md-nav__link--active,
+.md-nav__link--active:hover {
   background-color: var(--accent) !important;
   color: var(--accent-foreground-light) !important;
 }
 
-/* Buttons and primary controls */
-button, .btn, .button, .md-button {
-  background: linear-gradient(180deg, var(--accent), var(--accent-strong)) !important;
-  color: var(--accent-foreground-light) !important;
-  border: none !important;
-  box-shadow: 0 6px 18px rgba(66,114,245,0.18);
-  border-radius: 6px;
-  padding: 0.45rem 0.9rem;
-}
 
-button:hover, .btn:hover, .button:hover {
-  transform: translateY(-1px);
-}
+/* Mobile Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem 0rem;
+  }
 
-/* Cards and panels */
-.card, .panel, .md-card {
-  background-color: var(--card-bg);
-  border: 1px solid rgba(66,114,245,0.06);
-  box-shadow: 0 6px 16px rgba(12,34,78,0.04);
-}
+  .hero-content {
+    padding-left: 0.8rem !important;
+    max-width: 100%;
+  }
 
-/* Code blocks, borders and accents */
-pre, code, .highlight, .card {
-  background-color: var(--code-bg);
-  border-color: rgba(66,114,245,0.12);
-}
+  .hero-title {
+    font-size: 2rem;
+  }
 
-/* Table headers */
-table thead th {
-  background: rgba(66,114,245,0.06);
-}
-
-/* Muted text */
-small, .muted, .meta {
-  color: var(--muted) !important;
-}
-
-/* Brand/logo */
-.brand, .logo, .site-name {
-  color: var(--accent) !important;
-}
-
-/* Footer */
-.site-footer, .footer {
-  background: linear-gradient(180deg, rgba(66,114,245,0.02), rgba(66,114,245,0.06));
-  border-top: 1px solid rgba(66,114,245,0.06);
-}
-
-/* Accent badge utility */
-.accent-bg {
-  background-color: var(--accent);
-  color: var(--accent-foreground-light);
-  padding: 0.25em 0.5em;
-  border-radius: 6px;
-}
-
-/* Focus outlines for accessibility */
-:focus {
-  outline: none;
-  box-shadow: 0 0 0 4px rgba(66,114,245,0.14);
-}
-
-/* Tweak TOC/anchor indicators */
-.toc .current, .md-nav .current::before {
-  background-color: var(--accent);
+  .hero-graphic {
+    display: none;
+  }
 }
