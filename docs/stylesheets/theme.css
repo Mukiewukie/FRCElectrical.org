@@ -82,14 +82,15 @@ h3 {
 }
 
 
-/* Mobile Responsive Adjustments - Restored to your original clean flow */
+/* Mobile Responsive Adjustments */
 @media screen and (max-width: 768px) {
   .hero-container {
-    flex-direction: column;
+    /* Changed to column-reverse to pull the graphic/icon to the top */
+    flex-direction: column-reverse;
     align-items: flex-start;
     gap: 1.5rem;
     padding: 1.5rem 0rem;
-    width: 100%; /* Resets to normal behavior within mobile boundaries */
+    width: 100%;
     margin-left: 0;
     margin-right: 0;
   }
@@ -99,12 +100,19 @@ h3 {
     max-width: 100%;
   }
 
-  .hero-title {
-    font-size: 2rem;
+  .hero-graphic {
+    display: flex;
+    width: 100%;
+    justify-content: center; 
+    margin-bottom: 0.5rem;   
   }
 
-  .hero-graphic {
-    display: none;
+  .hero-icon {
+    font-size: 140px; 
+  }
+
+  .hero-title {
+    font-size: 2rem;
   }
 }
 
