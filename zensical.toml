@@ -8,16 +8,6 @@
 
 [project]
 
-nav = [
-  "index.md",
-  "intro.md",
-  {"misc stuff" = [
-    "misc stuff/ZensicalExamples.md",
-    "misc stuff/markdown.md"
-  ]},
-  "Contribution.md"
-]
-
 # The site_name is shown in the page header and the browser window title
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_name
@@ -57,12 +47,11 @@ Copyright &copy; 2026 FRCElectrical.org
 nav = [
   "index.md",
   "intro.md",
-  "FRC Control System.md",
-  "Additional Resources.md",
   {"misc stuff" = [
     "misc stuff/ZensicalExamples.md",
     "misc stuff/markdown.md"
-  ]} #always put at the end 
+  ]},
+  "Contribution.md"
 ]
 
 # With the "extra_css" option you can add your own CSS styling to customize
