@@ -30,4 +30,3 @@ This page covers everything needed for you to make successful connections in the
 * 221 Inline WAGOs & y/g WAGOs
   * Solder connections are not advised as they are fragile and do not typically stand through much strain
   * Crimp connections are recommended
-
